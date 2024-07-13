@@ -1,0 +1,257 @@
+%-------------------------
+% Resume in Latex
+% Author : John O'Shea
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{20pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large John O'Shea} & Email : \href{mailto:oshea.john@gmail.com}{oshea.john@gmail.com} & {} & Mobile : +353\hspace{0.5ex}87\hspace{0.5ex}455\hspace{0.5ex}7153 & {} & Github: \href{https://github.com/jfoshea}{jfoshea}\\
+\end{tabular*}
+
+
+
+\section{Summary}
+    \resumeDesc
+    
+    {Experienced Engineer and self driven learner with a long history of working in the high tech industry. Strong engineering professional skills in Linux software development, Server/Data storage design, Embedded Systems, Root of Trust Security, Autonomous Systems, GPU Architecture, Virtualization technologies. and ASIC/FPGA design. Software skills in C, C++, Python, Rust, Verilog. Five Patents Granted: (7987229, 8156220, 8090789, 8645623, 7631128). 
+    \\I have Irish and USA citizenship.}
+    
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Qualcomm }{Cork, Ireland}
+      {\makecell[l]{Principal Engineer/Manager, GPU Software \\ Senior Staff Engineer/Manager, Snapdragon Root of Trust Software}}{\makecell[r]{Nov. 2022 - Present \\ Nov. 2019 - Aug. 2020}}
+      {\skill{C, C++} \skill{Root Of Trust Security} \skill{GPU SW, HW Architecture} \skill{Leadership}}
+      \resumeDesc{\begin{itemize}
+          \item Built/led software engineering teams for GPU software development - Vulkan, OpenCL, DX12, Tools for Snapdragon Adreno GPU.
+          \item Led a software validation team for a new Hardware Root of Trust (RoT) IP in the Snapdragon SoC. Developed C code, Python and cmm scripts to exercise and validate the various Crypto hardware blocks,and the various RISCV/custom CPU cores within the Hardware Root of Trust IP.
+      \end{itemize}}
+      \resumeExpSubheading
+      {Helgen Technologies}{Cork, Ireland, Baltimore, MD}
+      {Cofounder, Engineering Lead and Technical consultant}{Sept. 2021 - Sept. 2022}
+      {\skill{Leadership} \skill{Digital Twins} \skill{C, C++}}
+      \resumeDesc{\begin{itemize}
+          \item Co-Founder of startup for heavy machine automation. Built a small engineering team to work on digital twin solutions for heavy machine automation.
+          \item Boot strapped the company by working as sub-contractor for Automotive and Drone startup companies. Helped develop C and C++ code for embedded development.
+      \end{itemize}}
+
+      \resumeExpSubheading
+      {Jaguar Land Rover}{Shannon, Ireland}
+      {Senior Software Engineer, Software Architect}{Oct. 2018 - Oct. 2019 }      
+      {\skill{C++} \skill{ADAS} \skill{SW Architecture}}
+      \resumeDesc{\begin{itemize}
+          \item Developed vehicle motion controller algorithms for use on ADAS Level 4 capable self-driving software stack. Developed C++14 code for ADAS prototyping and development.
+          \item Software Architecture for next-gen electrical vehicle architecture platform.
+      \end{itemize}}
+
+      \resumeExpSubheading
+      {Dell Technologies, EMC Corporation}{Hopkinton, MA}
+      {\makecell[l]{Principal Software Engineer, Platform SW team \\ Principal Firmware/Hardware Engineer, Platform HW team \\ Senior Hardware Engineer, Platform HW team}}
+      {\makecell[r]{Jan. 2012 - Oct. 2018 \\ Jan. 2006 - Jan. 2012 \\ Jan. 2000 - Jan. 2006}}
+      {\skill{C, C++, Python} \skill{Linux, U-Boot, Device Tree, Buildroot, UEFI} \skill{BMC,IPMI} \skill{PCIe, Infiniband, Ethernet}}
+      \resumeDesc{\begin{itemize}
+          \item Developed several embedded Linux applications for server, storage enclosure management products based on ARM64, x86 platforms. 
+          \item Contributed to in house custom BMC firmware stack. Developed platform specific adaptations in u-boot, Linux applications, kernel, drivers for various for different server and storage products. 
+          \item Developed composable storage platform based PCIe and Ethernet based fabric backbones. Ported Broadcom Network OS to ARM64 platform.
+          \item Developed C and C++ UEFI Applications and Device Drivers. Collaborated with 3rd party vendors for UEFI Device driver development.
+          \item Developed a Mellanox InfiniBand SoC "Exerciser" as a proof of concept for the new fabric backbone network for the VMAX Data Storage product. Influenced the design and direction of the project. Developed a testing framework (C, python) for the project to program MLX MAD packets to exercise the SoC.
+          \item Developed a family of custom ASICs targeted to the Symmetrix Data Storage products. Led architecture and design of custom Tensilica embedded processors and firmware development. Acted as Technical Leader on the Firmware architecture and development. Developed C code to run on embedded Tensilica processors. Developed hardware design using Verilog and Cadence tools. Responsible for co-design of hardware vs firmware tradeoffs and optimizations.
+      \end{itemize}}
+
+
+      \resumeExpSubheading
+      {EMC Corporation}{Cork, Ireland}
+      {\makecell[l]{ASIC Component Engineer \\ Test Engineer}}{\makecell[r]{June 1997 - Dec. 1999 \\ June 1993 - Aug. 1997}}
+      {\skill{HW Debugging} \skill{Data Storage} \skill{Testing} \skill{ASIC/FPGA Technology}}
+      \resumeDesc{\begin{itemize}
+          \item Started an internal environmental test department for stress testing Symmetrix controller boards. 
+          \item Responsible for setting up specialized test equipment, developing the test strategy and training. 
+          \item Responsible for both test and board/component level debug on Symmetrix Data Storage Products and ASIC/FPGA failure analysis.
+      \end{itemize}}
+
+
+      \resumeExpSubheading
+      {Amdahl Corporation}{Dublin, Ireland}
+      {Test Engineer}{June 1992 - June 1993 }      
+      {\skill{HW Debugging} \skill{Mainframe computer architecture}}
+      \resumeDesc{\begin{itemize}
+          \item Assigned to Test Engineer role for the Amdahl 5995M mainframe. \item Responsible for board level test and debug of various elements within the mainframe.
+      \end{itemize}}
+%
+      
+      \resumeExpSubheading
+      {Cork Institute of Technology}{Cork, Ireland}
+      {Research Assistant}{Jan. 1992 - June 1992 }      
+      {\skill{HW,SW Design} \skill{System Requirements} \skill{8051 assembly}}
+      \resumeDesc{\begin{itemize}
+          \item Designed and implemented a “Talking Multi-meter”.
+          \item Responsible for the design of an 8051 Embedded Microcontroller and a TI speech synthesis chip for taking electrical measurements as input and used synthetic speech to output the result of the measurement.
+          \item The project included both hardware design and software development using the 8051 assembly language.
+      \end{itemize}}
+      
+      \resumeSubHeadingListEnd
+%
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {University of Limerick}{Limerick, Ireland}
+      {Master's degree in Computer Engineering (Part-time)}{Sept. 1997 - June. 2001}
+  \resumeSubheading
+       {British Computer Society / Dublin Institute of Technology (DIT)}{Dublin, Ireland}{Degree Computer Science (Part-time)}{Sept. 1992 - June. 1996}
+    \resumeSubheading
+      {Cork Institute of Technology CIT)}{Cork, Ireland}
+      {Electronic Engineering}{Sept. 1988 - June. 1991}
+	 %\begin{comment}
+	 \resumeItemListStart
+        \resumeItem{}
+          {}
+      \resumeItemListEnd
+      %\end{comment}
+  \resumeSubHeadingListEnd
+
+%
+%--------PATENTS------------
+\section{Patents}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{7987229}{: \href{https://patents.google.com/patent/US7987229B1/en?oq=7987229}{Data storage system having plural data pipes}}
+   }\vspace{-7pt}
+   \item{
+     \textbf{8156220}{: \href{https://patents.google.com/patent/US8156220B1/en?oq=8156220} {Data Storage System}}
+   }\vspace{-7pt}
+   \item{
+     \textbf{8090789}{: \href{https://patents.google.com/patent/US8090789B1/en?oq=8090789} {Method of operating a data storage system having plural data pipes}}
+   }\vspace{-7pt}
+   \item{
+     \textbf{8645623}{: \href{https://patents.google.com/patent/US8645623B1/en?oq=8645623} {Method for performing a raid operation in a data storage system}}
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{7631128}{: \href{https://patents.google.com/patent/US7631128B1/en?oq=7631128} {Protocol controller for a data storage system}}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
