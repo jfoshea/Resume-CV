@@ -1,5 +1,6 @@
 %-------------------------
 % Resume in Latex
+% Date December 2025
 % Author : John O'Shea
 %------------------------
 
@@ -17,6 +18,8 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+
 
 
 \pagestyle{fancy}
@@ -124,35 +127,37 @@
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large John O'Shea} & Email : \href{mailto:oshea.john@gmail.com}{oshea.john@gmail.com}\\
-  Github: \href{https://github.com/jfoshea}{jfoshea} & LinkedIn : \href{https://www.linkedin.com/in/john-oshea/}{john-oshea} \\
+  \includegraphics[width=0.1\linewidth]{photo-joshea.png} \\
+  \textbf{\Large John O'Shea}   
+  \\Email : \href{mailto:oshea.john@gmail.com}{oshea.john@gmail.com}, Github: \href{https://github.com/jfoshea}{jfoshea}, LinkedIn : \href{https://www.linkedin.com/in/john-oshea/}{john-oshea} \\
+  
 \end{tabular*}
 
 
 \section{Summary}
     \resumeDesc
     
-    {Experienced Engineer and self driven learner with a long history of working in the high tech industry. Strong engineering professional skills in Linux software development, Server/Data storage design, Embedded Systems, Root of Trust Security, Autonomous Systems, GPU Architecture, Virtualization technologies, and ASIC/FPGA design. Software skills in C, C++, Python, Rust, Verilog. Five Patents Granted: (7987229, 8156220, 8090789, 8645623, 7631128). 
-    \\I have Irish and USA citizenship.}
+    {Experienced engineer and self‑directed learner with a strong record of innovation across the high‑tech industry. I bring hands‑on expertise across both software and hardware development, with extensive work in server and data‑storage technologies including sRIO, InfiniBand, and PCIe on Linux and bare‑metal embedded platforms. I have also knowledge and delivered in areas such Root of Trust, OS level projects, GPU software and sensors/control in ADAS. My background spans advanced platform engineering and complex, multi‑layered technology stacks, where I excel at systems‑level thinking, cross‑domain problem‑solving, and architecting robust, scalable, and high‑performance platforms. I am the inventor on five granted U.S. patents (7987229, 8156220, 8090789, 8645623, 7631128) and hold U.S. citizenship.}
     
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
       \resumeExpSubheading
       {Qualcomm }{Cork, Ireland}
-      {\makecell[l]{Principal Engineer/Manager, GPU Software \\ Senior Staff Engineer/Manager, Snapdragon Root of Trust Software}}{\makecell[r]{Nov. 2022 - Present \\ Nov. 2019 - Aug. 2020}}
-      {\skill{C, C++} \skill{Root Of Trust Security} \skill{GPU SW, HW Architecture} \skill{Leadership}}
+      {\makecell[l]{Director of Engineering / Principal Engineer, GPU Software, Core Platform Software for Snapdragon SoC \\ Senior Staff Engineer/Manager, Root of Trust IP development/validation for Snapdragon SoC}}{\makecell[r]{Nov. 2022 - Present \\ Nov. 2019 - Aug. 2020}}
+      {\skill{Leadership} \skill{C, C++} \skill{GPU SW, HW Architecture} \skill{Root Of Trust Security}}
       \resumeDesc{\begin{itemize}
-          \item Built/led software engineering teams for GPU software development - Vulkan, OpenCL, DX12, Tools for Snapdragon Adreno GPU.
-          \item Led a software validation team for a new Hardware Root of Trust (RoT) IP in the Snapdragon SoC. Developed C code, Python and cmm scripts to exercise and validate the various Crypto hardware blocks,and the various RISCV/custom CPU cores within the Hardware Root of Trust IP.
+          \item Built and led high‑performance software engineering teams delivering GPU software for Snapdragon Adreno, spanning Vulkan, OpenCL, SYCL, DirectX 12, research initiatives, and internal developer tools.
+        \item Directed software engineering teams for AI data‑center inference products, with a focus on core platform software layer, including SoC firmware, peripheral interfaces, bootloaders, hypervisors, and power‑management systems.
+        \item Led the software validation team for a new Hardware Root of Trust (RoT) IP within the Snapdragon SoC. Designed and implemented C, Python, and CMM‑based validation frameworks to exercise and verify cryptographic hardware blocks and multiple RISC‑V and custom CPU cores inside the RoT subsystem..
       \end{itemize}}
       \resumeExpSubheading
       {Helgen Technologies}{Cork, Ireland and Baltimore, MD}
       {Cofounder, Engineering Lead and Technical consultant}{Sept. 2020 - Dec. 2022}
-      {\skill{Leadership} \skill{Digital Twins} \skill{C, C++}}
+      {\skill{Leadership} \skill{Proof of concepts} \skill{Prototyping} \skill{Customer Focus}}
       \resumeDesc{\begin{itemize}
-          \item Co-Founder of startup for heavy machine automation. Built a small engineering team to work on digital twin solutions for heavy machine automation.
-          \item Boot strapped the company by working as sub-contractor for Automotive and Drone startup companies. Helped develop C and C++ code for embedded development.
+          \item Co-Founder of a startup focused on autonomous systems, where I built and led a small engineering team developing prototype automation solutions.
+          \item Boot strapped the company by working as sub-contractor for Automotive sensor startup and Drone POC initiatives. Helped develop C and C++ code for embedded development.
       \end{itemize}}
 
       \resumeExpSubheading
@@ -160,7 +165,7 @@
       {Senior Software Engineer, Software Architect}{Nov. 2018 - Nov. 2019 }      
       {\skill{C++} \skill{ADAS} \skill{SW Architecture}}
       \resumeDesc{\begin{itemize}
-          \item Developed vehicle motion controller algorithms for use on ADAS Level 4 capable self-driving software stack. Developed C++14 code for ADAS prototyping and development.
+          \item Developed vehicle motion controller algorithms for use on ADAS Level 3/4 capable self-driving software stack. Developed C++14 code for ADAS prototyping and development.
           \item Software Architecture for next-gen electrical vehicle architecture platform.
       \end{itemize}}
 
@@ -168,14 +173,13 @@
       {Dell Technologies, EMC Corporation}{Hopkinton, MA}
       {\makecell[l]{Principal Software Engineer, Platform SW team \\ Principal Firmware/Hardware Engineer, Platform HW team \\ Senior Hardware Engineer, Platform HW team}}
       {\makecell[r]{Jan. 2012 - Oct. 2018 \\ Jan. 2006 - Jan. 2012 \\ Jan. 2000 - Jan. 2006}}
-      {\skill{C, C++, Python} \skill{Linux, U-Boot, Device Tree, Buildroot, UEFI} \skill{BMC,IPMI} \skill{PCIe, Infiniband, Ethernet}}
+      {\skill{C, C++, Python} \skill{Linux, U-Boot, Device Tree, Buildroot, UEFI} \skill{BMC,IPMI} \skill{sRIO, Infiniband, Ethernet,PCIe}}
       \resumeDesc{\begin{itemize}
-          \item Developed several embedded Linux applications for server, storage enclosure management products based on ARM64, x86 platforms. 
-          \item Contributed to in house custom BMC firmware stack. Developed platform specific adaptations in u-boot, Linux applications, kernel, drivers for various for different server and storage products. 
-          \item Developed composable storage platform based PCIe and Ethernet based fabric backbones. Ported Broadcom Network OS to ARM64 platform.
-          \item Developed C and C++ UEFI Applications and Device Drivers. Collaborated with 3rd party vendors for UEFI Device driver development.
-          \item Developed a Mellanox InfiniBand SoC "Exerciser" as a proof of concept for the new fabric backbone network for the VMAX Data Storage product. Influenced the design and direction of the project. Developed a testing framework (C, python) for the project to program MLX MAD packets to exercise the SoC.
-          \item Developed a family of custom ASICs targeted to the Symmetrix Data Storage products. Led architecture and design of custom Tensilica embedded processors and firmware development. Acted as Technical Leader on the Firmware architecture and development. Developed C code to run on embedded Tensilica processors. Developed hardware design using Verilog and Cadence tools. Responsible for co-design of hardware vs firmware tradeoffs and optimizations.
+          \item Developed and maintained Embedded Linux software for data‑center hardware platforms, including U‑Boot, Linux kernel, and device drivers, across ARM64 and x86 server and storage systems. Contributed to the design and evolution of a custom BMC firmware stack supporting large‑scale fleet management in hyperscale data‑center environments. 
+          \item Composable Storage and High‑Speed Networking Engineering. Architected and developed a composable storage platform leveraging PCIe and Ethernet‑based fabric backbones, enabling dynamic resource pooling and high‑bandwidth, low‑latency data paths across distributed systems. Implemented and validated firmware for 100G networking subsystems, including PHY bring‑up, link training, diagnostics, and performance tuning across multi‑lane high‑speed SerDes interfaces. Ported Broadcom’s 32-bit Network Operating System to an ARM64 hardware platform (Applied Micro Xgene), integrating: Bootloader and BSP modifications Hardware abstraction layer (HAL) enablement, Platform drivers for networking, storage, and management subsystems, System bring‑up, debugging, and performance validation. Collaborated closely with hardware, ASIC, and platform teams to ensure seamless interoperability across PCIe, Ethernet, and ARM64 components..
+          \item Developed UEFI software applications and drivers for data‑center storage platforms, enabling secure firmware update management and comprehensive pre‑boot system health checks, including MCA, RAS, and DIMM ECC error reporting. Collaborated with third‑party silicon and device vendors to design and integrate UEFI device drivers, ensuring reliable firmware update workflows and advanced diagnostic capabilities for external SoCs. Contributed to the successful launch of multiple products by delivering robust firmware components and driving effective cross‑functional collaboration across hardware, software, and platform teams.
+          \item Developed a proof‑of‑concept validation platform for the next‑generation InfiniBand fabric backend powering EMC VMAX storage systems. Designed and implemented a bare‑metal C driver for the MLX4 SoC and built a modular C/Python test framework capable of orchestrating complex, high‑stress performance workloads. Created custom MLX MAD packet generators to characterize bandwidth, latency, and reliability limits across the fabric. The platform became a critical tool for early architectural decision‑making—exposing integration defects, uncovering key performance behaviors, and directly shaping the design of the new fabric subsystem. This work substantially accelerated the engineering team’s ability to test, iterate, and converge on a robust system architecture.
+          \item Developed a family of custom ASICs integrating PCIe–sRIO interfaces for EMC Symmetrix enterprise data‑storage systems. Led the architecture and design of custom Tensilica‑based embedded processors, including instruction‑set extensions and firmware ecosystem development. Served as Technical Leader for firmware architecture, guiding system‑level design decisions, development processes, and cross‑functional integration. Designed and implemented embedded C firmware optimized for custom Tensilica processor cores. Created hardware designs using Verilog and Cadence toolchains, ensuring tight coupling between hardware and firmware components. Drove hardware–firmware co‑design, performing tradeoff analysis and optimization to meet performance, power, and area targets.
       \end{itemize}}
 
 
@@ -184,9 +188,9 @@
       {\makecell[l]{ASIC Component Engineer \\ Test Engineer}}{\makecell[r]{June 1997 - Dec. 1999 \\ June 1993 - Aug. 1997}}
       {\skill{HW Debugging} \skill{Data Storage} \skill{Testing} \skill{ASIC/FPGA Technology}}
       \resumeDesc{\begin{itemize}
-          \item Started an internal environmental test department for stress testing Symmetrix controller boards. 
-          \item Responsible for setting up specialized test equipment, developing the test strategy and training. 
-          \item Responsible for both test and board/component level debug on Symmetrix Data Storage Products and ASIC/FPGA failure analysis.
+          \item Built and led an internal environmental test organization responsible for stress‑testing Symmetrix controller boards to validate reliability and performance under extreme thermal, electrical, and mechanical conditions.
+            \item Designed and commissioned specialized environmental and diagnostic test equipment, created end‑to‑end test strategies, and delivered training programs for engineering and manufacturing teams to ensure consistent execution.
+            \item Performed advanced board‑ and component‑level debugging on Symmetrix enterprise storage systems, including deep‑dive ASIC and FPGA failure analysis, to identify root causes, implement corrective actions, and improve product robustness..
       \end{itemize}}
 
 
@@ -255,3 +259,4 @@
 
 %-------------------------------------------
 \end{document}
+
